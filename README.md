@@ -10,30 +10,36 @@
 [![Runs offline](https://img.shields.io/badge/runs%20offline-%240.00-blue)](#try-it-in-30-seconds)
 [![License](https://img.shields.io/badge/license-MIT-black)](LICENSE)
 
-<img src="media/demo.gif" alt="The agent browsing the course catalog and extracting units and prerequisites" width="820">
+<img src="media/demo.gif" alt="Demo clip rendered by the bundled offline mock through the frame-capture pipeline" width="820">
 
-<sub>Every frame above is a **real screenshot the model actually saw** — pulled from the run's own model-input frames, not a reconstruction.</sub>
+<sub>The clip above is rendered by the **bundled offline mock**, so a fresh clone has a hero with no key and no spend. Run `npm run demo` against live Coasty and the same pipeline rebuilds it from the run's own model-input frames — the exact images the model saw.</sub>
 
 </div>
 
 ---
 
+- **Zero dependencies.** No `npm install`, no lockfile, no supply chain — pure Node built-ins.
+- **Runs offline for $0.** No API key, no account. A bundled in-process mock runs the full agent loop on a fresh clone.
+- **The demo video renders itself.** The frames come straight out of the run — against live Coasty they are the model's own input frames, so there is no storyboard that can drift.
+
 ## What this is
 
-A complete, production-grade [Coasty](https://coasty.ai) computer-use automation for **course catalog auditing**. It gives an AI agent one goal in plain English, and the agent drives a real browser on a real cloud desktop to accomplish it — no selectors, no scraping rules, no DOM parsing to maintain.
+A complete, runnable [Coasty](https://coasty.ai) computer-use automation for **course catalog auditing**. It gives an AI agent one goal in plain English, and the agent drives a real browser on a real cloud desktop to accomplish it — no selectors, no scraping rules, no DOM parsing to maintain.
 
 Registrars, advising teams, transfer-credit evaluators and curriculum tools all need the same facts: what a department actually offers, how many units each subject carries, what it requires first, and which terms it runs in. Catalogs are the authoritative source for that, and almost none of them ship an API — they are HTML, they are re-authored every academic year, and each institution renders them differently. A scraper is a per-catalog selector set that breaks on the next redesign. An agent reads the page the way an advisor does, so the same prompt works across a re-skin and across institutions.
 
 **Zero dependencies. Runs offline for $0 on a fresh clone. ~$0.70 to run for real.**
 
 ```
-"Go to http://catalog.mit.edu and open the subject listing for Course 6,
- Electrical Engineering and Computer Science. From that listing, take the
- first three undergraduate subjects shown and record for each one: its
- subject number, its full title, its total units, its prerequisites exactly
- as written, and the terms in which it is offered. Then report those three
- subjects with all five values, and state how many of the three list at
- least one prerequisite."
+"Go to https://catalog.mit.edu/subjects/6/, the MIT subject listing for
+ Course 6, Electrical Engineering and Computer Science. Take the first
+ three subjects on that page that are marked U for undergraduate and record
+ for each one: its subject number, its full title, its units line exactly
+ as printed (MIT writes these as three numbers, for example '3-0-9 units'),
+ its prerequisites exactly as written after 'Prereq:', and the terms in
+ which it is offered. Then report those three subjects with all five
+ values, and state how many of the three list a prerequisite other than
+ 'None'. Stop once those three subjects and that count have been reported."
 ```
 
 That prompt *is* the automation. When the site redesigns, the prompt still works.
@@ -120,7 +126,7 @@ src/capture.mjs      model-input frames → mp4/gif/poster, with sanity checks
 src/cli.mjs          run · demo · estimate
 tools/mock.mjs       the bundled offline Coasty (real 1280×720 PNG frames)
 tools/doctor.mjs     preflight
-test/                25 tests, zero dependencies, fully offline
+test/                36 tests, zero dependencies, fully offline
 ```
 
 Adding a new automation is one `automation.json` and one prompt — `src/` never forks. See [AGENTS.md](AGENTS.md) for the authoring contract used by Claude Code and Codex.
@@ -133,7 +139,7 @@ npm test     # node --test, no install, no network, no key
 
 ## Related
 
-Part of the **Coasty automation catalog** — production-grade computer-use automations across 12 industries. See [the index](https://github.com/coasty-ai) for finance, healthcare, legal, logistics, energy, public sector, HR, retail, manufacturing, nonprofit and e-commerce.
+Part of the **Coasty automation catalog** — computer-use automations across 12 industries. See [the index](https://github.com/coasty-ai) for finance, healthcare, legal, logistics, energy, public sector, HR, retail, manufacturing, nonprofit and e-commerce.
 
 - [Coasty docs](https://coasty.ai/docs) · [API reference](https://coasty.ai/docs/llms.txt)
 - [computer-use-cookbook](https://github.com/coasty-ai/computer-use-cookbook) — the API, by endpoint, in 4 languages

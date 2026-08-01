@@ -5,7 +5,7 @@
   "niche": "course catalogue audit",
   "target": "catalog.mit.edu",
   "publicTarget": true,
-  "task": "Go to http://catalog.mit.edu and open the subject listing for Course 6, Electrical Engineering and Computer Science. From that listing, take the first three undergraduate subjects shown and record for each one: its subject number, its full title, its total units, its prerequisites exactly as written, and the terms in which it is offered. Then report those three subjects with all five values, and state how many of the three list at least one prerequisite.",
+  "task": "Go to https://catalog.mit.edu/subjects/6/, the MIT subject listing for Course 6, Electrical Engineering and Computer Science. Take the first three subjects on that page that are marked U for undergraduate and record for each one: its subject number, its full title, its units line exactly as printed (MIT writes these as three numbers, for example '3-0-9 units'), its prerequisites exactly as written after 'Prereq:', and the terms in which it is offered. Then report those three subjects with all five values, and state how many of the three list a prerequisite other than 'None'. Stop once those three subjects and that count have been reported.",
   "expectedSteps": 14,
   "maxSteps": 24,
   "capCents": 121,
@@ -14,5 +14,67 @@
   "machine": {
     "os_type": "linux",
     "desktop_enabled": true
+  },
+  "portal": {
+    "site": "MIT Course Catalog",
+    "url": "https://catalog.mit.edu/subjects/6/",
+    "nav": [
+      "Home",
+      "Schools",
+      "Departments",
+      "Subjects",
+      "Degree Charts",
+      "Search"
+    ],
+    "label": "Search Catalog",
+    "query": "Course 6 Electrical Engineering and Computer Science",
+    "hint": "Browse subjects by department in the 2026-27 catalog.",
+    "columns": [
+      "Subject and Title",
+      "Units",
+      "Prereq",
+      "Terms Offered"
+    ],
+    "total": "146",
+    "rows": [
+      [
+        "6.1000 Introduction to Programming and CS",
+        "3-0-9 units",
+        "None",
+        "Fall, Spring"
+      ],
+      [
+        "6.100A Intro to CS Programming in Python",
+        "2-0-4 units",
+        "None",
+        "Fall, Spring"
+      ],
+      [
+        "6.100B Intro to Computational Thinking",
+        "2-0-4 units",
+        "6.100A or permission",
+        "Fall, Spring"
+      ],
+      [
+        "6.1010 Fundamentals of Programming",
+        "5-0-7 units",
+        "6.100A",
+        "Fall, Spring"
+      ],
+      [
+        "6.1200 Mathematics for Computer Science",
+        "5-0-7 units",
+        "Calculus I GIR",
+        "Fall, Spring"
+      ],
+      [
+        "6.1210 Introduction to Algorithms",
+        "5-0-7 units",
+        "6.100A, 6.1200",
+        "Fall, Spring"
+      ]
+    ],
+    "answerRow": 0,
+    "answer": "First three U subjects 6.1000, 6.100A, 6.100B; 1 of the 3 lists a prerequisite other than 'None'"
   }
 }

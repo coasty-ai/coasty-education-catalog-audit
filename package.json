@@ -1,15 +1,24 @@
 {
   "name": "coasty-education-catalog-audit",
   "version": "1.0.0",
-  "description": "An AI agent that audits a university course catalog and reports units, prerequisites and terms offered.",
+  "description": "An AI agent that opens a real university course catalog, reads a department's subject listings, and reports units, prerequisites and terms offered — then films itself doing it.",
   "keywords": [
     "coasty",
     "computer-use",
     "ai-agent",
     "browser-automation",
     "rpa",
-    "education",
-    "education-catalog-audit"
+    "llm",
+    "automation",
+    "web-automation",
+    "agentic-ai",
+    "no-code-scraping",
+    "web-scraping",
+    "scraping",
+    "playwright-alternative",
+    "zero-dependency",
+    "nodejs",
+    "education"
   ],
   "homepage": "https://github.com/coasty-ai/coasty-education-catalog-audit",
   "repository": {
