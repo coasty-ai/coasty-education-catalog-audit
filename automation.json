@@ -1,0 +1,18 @@
+{
+  "slug": "education-catalog-audit",
+  "title": "Education — course catalog audit",
+  "vertical": "Education",
+  "niche": "course catalogue audit",
+  "target": "catalog.mit.edu",
+  "publicTarget": true,
+  "task": "Go to http://catalog.mit.edu and open the subject listing for Course 6, Electrical Engineering and Computer Science. From that listing, take the first three undergraduate subjects shown and record for each one: its subject number, its full title, its total units, its prerequisites exactly as written, and the terms in which it is offered. Then report those three subjects with all five values, and state how many of the three list at least one prerequisite.",
+  "expectedSteps": 14,
+  "maxSteps": 24,
+  "capCents": 121,
+  "cuaVersion": "v5",
+  "deadlineSeconds": 900,
+  "machine": {
+    "os_type": "linux",
+    "desktop_enabled": true
+  }
+}
