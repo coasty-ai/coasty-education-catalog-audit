@@ -1,0 +1,24 @@
+{
+  "kind": "real-capture",
+  "note": "Every frame is a screenshot taken by a real browser driving real software during a real agent run.",
+  "software": "SIS/CATALOG subject master inquiry",
+  "task": "Sign on to this Student Information System catalog terminal with operator ID REG04, then from the catalog function menu open SUBJECT MASTER INQUIRY. Run an inquiry for department code 30 - MATHEMATICS, with the Term Offered Filter set to SP - SPRING 2027 and the Course Level filter left on ALL LEVELS. Note how many records that selection returned. From the results list find the single subject carrying the HIGHEST number of credit units, then display the subject master detail for that subject number. Report: (1) how many records the inquiry selected, (2) that subject's number, (3) its title, (4) its credit units, and from the detail screen (5) its PREREQUISITES, (6) its INSTRUCTOR OF RECORD, (7) its ENROLLMENT CAP and (8) its CATALOG EFFECTIVE date. Quote every value exactly as the screens display it.",
+  "model": "gpt-5.2",
+  "captured_at": "2026-08-02T00:53:48.541Z",
+  "status": "succeeded",
+  "answer": "(1) Records selected: \"008\"\n(2) Subject number: \"MATH 3210\"\n(3) Title: \"REAL ANALYSIS I\"\n(4) Credit units: \"5.0\"\n(5) PREREQUISITES: \"MATH 2210 AND MATH 2270\"\n(6) INSTRUCTOR OF RECORD: \"WEATHERSBY K\"\n(7) ENROLLMENT CAP: \"045\"\n(8) CATALOG EFFECTIVE: \"2024-08-19\"",
+  "steps_taken": 5,
+  "frames_rendered": 5,
+  "frames_captured": 5,
+  "duplicate_frames_dropped": 0,
+  "model_calls": 5,
+  "approx_usd": 0.0201,
+  "video_seconds": 15.2,
+  "frame_sha256": [
+    "95e88228d876af9ccea906b3f873a5e7759d8d4822e966c81d5ba30415c3983b",
+    "c678a43fcf81821dad416ee65639043eecb781b83434de5e3196d9b8106f173c",
+    "bc65323e7689ef05013bccfba793da9a150c55f2d7afe23bced3c7095f102185",
+    "2ee0a49d56de4c32ee7cfda2397392dd5305bb2ba31c404bada737d8dda8424b",
+    "9df9c6cedb639406b5f669b258b0495fd0146764bd7ff6be19db983c43d8eda6"
+  ]
+}
