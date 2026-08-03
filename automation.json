@@ -3,9 +3,9 @@
   "title": "Education — course catalog audit",
   "vertical": "Education",
   "niche": "course catalogue audit",
-  "target": "catalog.mit.edu",
-  "publicTarget": true,
-  "task": "Go to https://catalog.mit.edu/subjects/6/, the MIT subject listing for Course 6, Electrical Engineering and Computer Science. Take the first three subjects on that page that are marked U for undergraduate and record for each one: its subject number, its full title, its units line exactly as printed (MIT writes these as three numbers, for example '3-0-9 units'), its prerequisites exactly as written after 'Prereq:', and the terms in which it is offered. Then report those three subjects with all five values, and state how many of the three list a prerequisite other than 'None'. Stop once those three subjects and that count have been reported.",
+  "target": "Student Information System",
+  "publicTarget": false,
+  "task": "Sign on to this Student Information System catalog terminal with operator ID REG04, then from the catalog function menu open SUBJECT MASTER INQUIRY. Run an inquiry for department code 30 - MATHEMATICS, with the Term Offered Filter set to SP - SPRING 2027 and the Course Level filter left on ALL LEVELS. Note how many records that selection returned. From the results list find the single subject carrying the HIGHEST number of credit units, then display the subject master detail for that subject number. Report: (1) how many records the inquiry selected, (2) that subject's number, (3) its title, (4) its credit units, and from the detail screen (5) its PREREQUISITES, (6) its INSTRUCTOR OF RECORD, (7) its ENROLLMENT CAP and (8) its CATALOG EFFECTIVE date. Quote every value exactly as the screens display it.",
   "expectedSteps": 14,
   "maxSteps": 24,
   "capCents": 121,
@@ -17,9 +17,21 @@
   },
   "portal": {
     "theme": {
-      "bar": [117, 20, 34],
-      "accent": [163, 31, 52],
-      "shade": [243, 235, 236]
+      "bar": [
+        117,
+        20,
+        34
+      ],
+      "accent": [
+        163,
+        31,
+        52
+      ],
+      "shade": [
+        243,
+        235,
+        236
+      ]
     },
     "site": "MIT Course Catalog",
     "sub": "Electrical Engineering and Computer Science (Course 6) - 2025-2026",
@@ -143,5 +155,6 @@
         "status": "Opening 6.100B to copy its prereq line exactly as printed"
       }
     ]
-  }
+  },
+  "software": "SIS/CATALOG subject master inquiry"
 }

@@ -26,22 +26,25 @@ no script and no answer key. Provenance and per-frame hashes in <a href="media/c
 
 ## What this is
 
-A complete, runnable [Coasty](https://coasty.ai) computer-use automation for **course catalog auditing**. It gives an AI agent one goal in plain English, and the agent drives a real browser on a real cloud desktop to accomplish it — no selectors, no scraping rules, no DOM parsing to maintain.
+A complete, runnable [Coasty](https://coasty.ai) computer-use automation for **course catalog auditing**. It gives an AI agent one goal in plain English, and the agent drives a real browser to accomplish it — here, the SIS/CATALOG subject master inquiry — no selectors, no scraping rules, no DOM parsing to maintain.
 
 Registrars, advising teams, transfer-credit evaluators and curriculum tools all need the same facts: what a department actually offers, how many units each subject carries, what it requires first, and which terms it runs in. Catalogs are the authoritative source for that, and almost none of them ship an API — they are HTML, they are re-authored every academic year, and each institution renders them differently. A scraper is a per-catalog selector set that breaks on the next redesign. An agent reads the page the way an advisor does, so the same prompt works across a re-skin and across institutions.
 
 **Zero dependencies. Runs offline for $0 on a fresh clone. ~$0.70 to run for real.**
 
 ```
-"Go to https://catalog.mit.edu/subjects/6/, the MIT subject listing for
- Course 6, Electrical Engineering and Computer Science. Take the first
- three subjects on that page that are marked U for undergraduate and record
- for each one: its subject number, its full title, its units line exactly
- as printed (MIT writes these as three numbers, for example '3-0-9 units'),
- its prerequisites exactly as written after 'Prereq:', and the terms in
- which it is offered. Then report those three subjects with all five
- values, and state how many of the three list a prerequisite other than
- 'None'. Stop once those three subjects and that count have been reported."
+"Sign on to this Student Information System catalog terminal with operator
+ ID REG04, then from the catalog function menu open SUBJECT MASTER INQUIRY.
+ Run an inquiry for department code 30 - MATHEMATICS, with the Term Offered
+ Filter set to SP - SPRING 2027 and the Course Level filter left on ALL
+ LEVELS. Note how many records that selection returned. From the results
+ list find the single subject carrying the HIGHEST number of credit units,
+ then display the subject master detail for that subject number. Report:
+ (1) how many records the inquiry selected, (2) that subject's number, (3)
+ its title, (4) its credit units, and from the detail screen (5) its
+ PREREQUISITES, (6) its INSTRUCTOR OF RECORD, (7) its ENROLLMENT CAP and
+ (8) its CATALOG EFFECTIVE date. Quote every value exactly as the screens
+ display it."
 ```
 
 That prompt *is* the automation. When the site redesigns, the prompt still works.
